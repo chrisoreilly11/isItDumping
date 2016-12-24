@@ -1,0 +1,42 @@
+body{
+  background-color: #bebebe;
+  font: 400 1em/1.38 Montserrat;
+  margin: auto;
+}
+
+
+
+#header {
+  position: absolute;
+  color: black;
+  padding: 0 16px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  text-align: left;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 398px;
+  height: 208px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: rgb(154, 188, 222);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  /*background: rgba(60, 60, 60, 0);
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 15%;
+  min-height: 300px;
+  padding: 24px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  text-align: center;*/
+}
