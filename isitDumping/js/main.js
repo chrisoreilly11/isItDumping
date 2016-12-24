@@ -7,14 +7,6 @@ function displayTemp(fTemp, c){
 	return Math.round(fTemp) + " F"
 }
 
-function changeBGImage(){
-  if (iconSrc == snow) {
-    alert ("its snowing");
-  }
-  else 
-    alert ("its not snowing");
-}
-
 $(function(){
   
   var loc;
