@@ -16,17 +16,27 @@ $(function(){
     loc = d.loc.split(",");
     console.log(loc);
     
+    // DEVALERT: used for testing snow. replace with lat/long for place where it's snowing
+    //loc[0] = 35.97;
+    //loc[1] = -83.19;
+
    $.getJSON('http://api.openweathermap.org/data/2.5/weather?units=imperial&lat='
              + loc[0] + '&lon=' + loc[1] + '&APPID=' + API_KEY, function(apiData){
      wd = apiData;
 
      console.log("got the data ,", wd);
      var currentLocation = wd.name;
+     var weatherType = wd.weather[0].main.toLowerCase();
      var currentWeather = wd.weather[0].description;
      var currentTemp = displayTemp(wd.main.temp, cel);
      var high = displayTemp(wd.main.temp_max, cel);
      var low = displayTemp(wd.main.temp_min, cel);
      var icon = wd.weather[0].icon;
+
+     // if snow, show background image
+     if (weatherType == "snow"){
+       $('#main').addClass('snow');
+     }
      
      $('#currentLocation').html(currentLocation);
      $('#currentTemp').html(currentTemp);
